@@ -1,0 +1,38 @@
+.form-signin-user {
+  width: 50%; /* Imposta la larghezza del form al 50% della finestra */
+  max-width: 500px; /* Limita la larghezza massima a 500px per evitare che diventi troppo largo su schermi grandi */
+  margin: 0 auto; /* Centra il form orizzontalmente */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-signin-user h2 {
+  margin-bottom: 15px;
+}
+
+.form-signin-user input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-signin-user button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-signin-user button:hover {
+  background-color: #0056b3;
+}
+
+.formsignin {
+  width: 30%; /* Non necessario, visto che la classe form-signin-filiale ha già una larghezza definita */
+  padding: center; /* Questa proprietà è errata, quindi puoi rimuoverla */
+}

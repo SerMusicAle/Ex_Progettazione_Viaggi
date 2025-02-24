@@ -1,0 +1,63 @@
+- Domini
+    phone_type
+    email_type
+    durata_type
+    stato_type
+    tipo_trasporto_type
+    tipo_recensione_type
+
+- Tabelle
+    MST_Geolocalizzazione
+
+    MST_Credenziali (FK_MST_Agenzia)
+    MST_Agenzia (FK_MST_Geolocalizzazione)
+    MST_Filiale (FK_MST_Agenzia, FK_MST_Geolocalizzazione)
+
+    MST_AgenziaFoto (FK_MST_Agenzia)
+    MST_FilialeFoto (FK_MST_Filiale)
+    MST_CompagniaFoto (FK_MST_Compagnia)
+
+    REL_CompagniaAeroporto (FK_MST_Compagnia, FK_MST_Aeroporto)
+    MST_Compagnia (FK_MST_Geolocalizzazione)
+    MST_Aeroporto (FK_MST_Geolocalizzazione)
+    MST_Tratta (FK_MST_AeroportoPar, FK_MST_AeroportoArr)
+    MST_Volo (FK_MST_Tratta, MST_Compagnia)
+   
+    MST_Alloggio(FK_MST_Geolocalizzazione)
+    MST_TurismoAttività (FK_MST_Geolocalizzazione)
+    MST_TurismoMeta (FK_MST_Geolocalizzazione)
+    REL_TurismoAttivitàMeta (FK_MST_TurismoMeta, FK_MST_TurismoAttvità)
+    LK_Sharing
+    MST_Sharing (FK_MST_Geolocalizzazione)
+
+    MST_AeroportoTrasportoAlloggio (FK_LK_TipoTrasporto, FK_MST_Alloggio, FK_MST_Aeroporto )
+
+
+DA AGGIUNGERE
+
+
+    MST_PacchettoViaggio 
+    MST_PacchettoPreventivo (FK_MST_Cliente, FK_MST_PacchettoViaggio)
+    MST_PacchettoPrenotazione (FK_MST_Cliente, FK_MST_PacchettoViaggio)
+
+    REL_PacchettoAttività (FK_MST_PacchettoViaggio, FK_MST_AttivitàTuristica)
+    REL_PacchettoVolo (FK_MST_PacchettoViaggio, FK_MST_Volo)
+    REL_PacchettoAlloggio (FK_MST_PacchettoViaggio, FK_MST_Alloggio)
+    REL_PacchettoCar (FK_MST_PacchettoViaggio, FK_MST_Car)
+    REL_PacchettoTrasporti (FK_MST_PacchettoViaggio, FK_MST_AeroportoTrasportoAlloggio)
+
+    MST_Cliente
+    MST_PreventivoCliente (FK_MST_Cliente)
+    MST_PreventivoVolo (FK_MST_PreventivoCliente, FK_MST_Volo)
+    MST_PreventivoAlloggio (FK_MST_PreventivoCliente, FK_MST_Alloggio)
+
+    MST_PrenotazioneCliente(FK_MST_Cliente)
+    MST_PrenotazioneVolo (FK_MST_Cliente, FK_MST_Volo)
+    MST_PrenotazioneAlloggio (FK_MST_Cliente, FK_MST_Alloggio)
+    MST_PrenotazioneAttivitàTuristica (FK_MST_Cliente, FK_MST_AttivitàTuristica)
+
+    MST_Recensione (FK_MST_Cliente, FK_MST_PrenotazioneCliente)
+
+- Logica
+    Credenziali e Filiale sono collegati tramite MST_Agenzia
+    Il preventivo deve trasferire i dati a prenotazione se si procede

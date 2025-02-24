@@ -1,0 +1,50 @@
+/* Modal.css */
+
+/* La classe per la modale */
+.modalScheda {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(22, 20, 20);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 500px; /* Imposta una larghezza massima per la modale */
+    width: 100%; /* La modale può adattarsi al 100% della larghezza su schermi piccoli */
+    border-radius: 8px; /* Angoli arrotondati per la modale */
+    display: flex; /* Usa flexbox per centrare gli elementi */
+    flex-direction: column; /* Posiziona gli elementi in colonna */
+    align-items: center; /* Centra orizzontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Allinea il testo al centro */
+  }
+  
+  /* La classe per l'overlay */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Sfondo semi-trasparente */
+    z-index: 999;  /* L'overlay deve essere sotto la modale */
+  }
+  
+  /* Posizione del pulsante di chiusura (modalClose) */
+  .modalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;  /* Posiziona il pulsante di chiusura in alto a destra */
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff; /* Colore del pulsante bianco */
+    cursor: pointer;
+    z-index: 1100; /* Assicurati che il pulsante stia sopra il contenuto */
+  }
+  
+  .modalClose:hover {
+    color: red; /* Cambia colore quando il pulsante è in hover */
+  }
+  
