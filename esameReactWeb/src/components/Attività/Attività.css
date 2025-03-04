@@ -1,0 +1,58 @@
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+.page-container {
+  padding: 20px;
+}
+
+.picker, .search-button {
+  margin: 10px 0;
+}
+
+.results-container {
+  margin-top: 20px;
+}
+
+.new-search-button {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-search-button:hover {
+  background-color: #0056b3;
+}
+
+.activity-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.activity-card {
+  border: 1px solid #007BFF;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1 );
+  flex: 1 1 calc(33% - 20px);
+  min-width: 250px; 
+
+.activity-card h3 {
+  margin: 0 0 10px;
+}
+
+.error-popup {
+  color: red;
+  margin-top: 10px;
+}

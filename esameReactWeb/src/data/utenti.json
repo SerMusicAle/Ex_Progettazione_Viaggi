@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "email": "maurizio.nataloni@stravel.it",
+        "password": "uforobot",
+        "nome": "Maurizio",
+        "cognome": "Nataloni"
+        
+    },
+    {
+        "id": 2,
+        "email": "toni.mancini@stravel.it",
+        "password": "progettazione",
+        "nome": "Toni",
+        "cognome": "Mancini"
+        
+    },
+    {
+        "id": 3,
+        "email": "alessandro.sereni@stravel.it",
+        "password": "musicale",
+        "nome": "Alessandro",
+        "cognome": "Sereni"
+        
+    },
+    {
+        "id": 4,
+        "email": "a",
+        "password": "a",
+        "nome": "test",
+        "cognome": "test"
+        
+    }
+]
